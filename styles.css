@@ -1,0 +1,216 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.container {
+    width: 90%;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+header {
+    background-color: #f8f8f8;
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+}
+
+.header-hover {
+    border-bottom: 8px solid #34cc99;
+    margin-bottom: 8px;
+}
+
+.show{
+    display: block!important;
+}
+.logo {
+    float: left;
+    padding: 20px 0px;
+}
+
+.logo a{
+    font-size: 28px;
+    letter-spacing: 2px;
+    font-weight: bold
+    color: #333;
+    font-family: system-ui;
+}
+.menu {
+    float: right;
+    margin-top: 25px;
+}
+
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.menu li{ 
+    display: inline-block;
+    position: relative;
+}
+
+.menu ul li.parent-menu {
+    display: inline-block;
+    padding: 10px 10px 0px 10px;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-left: 50px;
+    position: relative;
+    font-weight: 500;
+
+}
+
+.menu ul li.parent-menu:hover{
+    background: #34cc99;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+.menu ul li:first-child {
+    margin-left: 0; 
+}
+
+.menu ul li a{
+    display: block;
+    color: #333;
+    font-weight: bold;
+}
+
+a.link-parent-menu{
+    padding-bottom: 25px;
+}
+.submenu {
+    display: none;
+    position: absolute;
+    left: 0;
+    background-color: #34cc99;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-top: 8px solid #34cc99;
+}
+
+.submenu li{
+    width: 100%;
+    text-align: center;
+    min-width: 200px;
+}
+
+.submenu li a{
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 17px 25px;
+    color: #fff !important;
+    font-weight: 500;
+    white-space: nowrap;
+    text-shadow: #333333 0.1em 0.1em 0.1em;
+}
+.submenu li:hover{
+    background: #019966;
+}
+.banner{
+    max-height: 100vh;
+    overflow: hidden;
+}
+
+.banner img{
+    width: 100%;
+    opacity: 0.8;
+}
+.menu-toggle{
+    display: none;
+}
+@media only screen and (min-width: 768px){
+    .menu ul li:hover .submenu {
+        display: block;
+    }
+}
+@media only screen and (max-width: 767px) {
+    .menu-toggle{
+        display: block;
+    }
+    .logo{
+        padding: 10px 0px;
+    }
+    .menu {
+        float: none;
+        margin-top: 0;
+    }
+    .menu ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #ebeaea;
+        text-align: center;
+        padding: 0;
+    }
+    .menu ul li {
+        display: block;
+        margin: 0;
+        padding: 10px 0;
+    }
+    .menu-toggle {
+        display: block;
+        text-align: right;
+        cursor: pointer;
+        float: left;
+        padding-top: 20px;
+        padding-right: 15px;
+    }
+    .menu ul li.parent-menu{
+        width: 100%;
+        padding: 0px;
+        margin-left: 0px;
+    }
+    .banner{
+        width: 100%;
+        max-height: auto;
+        padding-top: 60px;
+    }
+    a.link-parent-menu {
+        line-height: 50px;
+        border-bottom: 1px solid #ccc;
+        text-align: left;
+        padding: 0px 20px 0px 15px;
+    }
+    .submenu{
+        display: block;
+        position: relative!important;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+        border-top: 0px;
+        background-color: #42bd78;
+    }
+    .submenu li{
+        border-bottom: 1px solid #ccc;
+        text-align: left;
+        padding: 0px!important;
+    }
+    .submenu li a{
+        background: #50b87e8f;
+    }
+    a.link-parent-menu {
+        padding-right: 20px; 
+        position: relative;
+    }
+    
+    a.link-parent-menu.has-submenu:after {
+        content: "▼";
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        font-size: 13px;
+        color: #333;
+        padding-right: 8px;
+    }
+}
